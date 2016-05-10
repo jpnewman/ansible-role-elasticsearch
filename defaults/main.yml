@@ -1,0 +1,8 @@
+elasticsearch_repo_version: 2.x
+elasticsearch_pkg: elasticsearch
+elasticsearch_plugin_marvel_version: 2.3.1
+elasticsearch_plugin_license_version: 2.3.1
+elasticsearch_plugin_watcher_version: 2.3.1
+elasticsearch_with_plugin: false
+
+apt_cache_valid_time: 600
