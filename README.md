@@ -1,5 +1,7 @@
 # jpnewman.elasticsearch
 
+[![Build Status](https://travis-ci.org/jpnewman/ansible-role-elasticsearch.svg?branch=master)](https://travis-ci.org/jpnewman/ansible-role-elasticsearch)
+
 This is a Ansible role to installs [elasticsearch](https://www.elastic.co/products/elasticsearch)
 
 This role is based on role ```elastic``` [https://github.com/rueian/ansible-elk-example.git]() by Rueian
