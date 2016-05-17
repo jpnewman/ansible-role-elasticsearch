@@ -1,5 +1,6 @@
 # jpnewman.elasticsearch
 
+[![Ansible Role](https://img.shields.io/ansible/role/9587.svg?maxAge=2592000)](https://galaxy.ansible.com/jpnewman/elasticsearch/)
 [![Build Status](https://travis-ci.org/jpnewman/ansible-role-elasticsearch.svg?branch=master)](https://travis-ci.org/jpnewman/ansible-role-elasticsearch)
 
 This is a Ansible role to installs [elasticsearch](https://www.elastic.co/products/elasticsearch)
