@@ -5,4 +5,6 @@ elasticsearch_plugin_license_version: 2.3.1
 elasticsearch_plugin_watcher_version: 2.3.1
 elasticsearch_with_plugin: false
 
+elasticsearch_heap_size_percentage: 0.5
+
 apt_cache_valid_time: 600
