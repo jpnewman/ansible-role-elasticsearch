@@ -5,7 +5,7 @@
 
 This is a Ansible role to installs [elasticsearch](https://www.elastic.co/products/elasticsearch)
 
-This role is based on role ```elastic``` [https://github.com/rueian/ansible-elk-example.git]() by Rueian
+This role is based on role ```elastic``` <https://github.com/rueian/ansible-elk-example.git> by Rueian
 
 ## Requirements
 
