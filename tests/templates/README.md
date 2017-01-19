@@ -1,4 +1,4 @@
-### Testing role 'jpnewman.elk-filebeats' template
+### Testing role 'jpnewman.elasticsearch' template
 
 ~~~
 mkdir tmp

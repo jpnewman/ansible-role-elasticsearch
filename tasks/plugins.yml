@@ -1,26 +1,26 @@
 # - shell: if [ -e /usr/share/elasticsearch/plugins/marvel/marvel-{{elasticsearch_plugin_marvel_version}}.jar ]; then echo yes; else echo no; fi;
 #   register: marvel_version_exists
-#   always_run: True
+#   check_mode: no
 
 # - shell: if [ -e /usr/share/elasticsearch/plugins/marvel ]; then echo yes; else echo no; fi;
 #   register: other_marvel_version_exists
-#   always_run: True
+#   check_mode: no
 
 - shell: if [ -e /usr/share/elasticsearch/plugins/license/license-{{elasticsearch_plugin_license_version}}.jar ]; then echo yes; else echo no; fi;
   register: license_version_exists
-  always_run: True
+  check_mode: no
 
 - shell: if [ -e /usr/share/elasticsearch/plugins/license ]; then echo yes; else echo no; fi;
   register: other_license_version_exists
-  always_run: True
+  check_mode: no
 
 - shell: if [ -e /usr/share/elasticsearch/plugins/watcher/watcher-{{elasticsearch_plugin_watcher_version}}.jar ]; then echo yes; else echo no; fi;
   register: watcher_version_exists
-  always_run: True
+  check_mode: no
 
 - shell: if [ -e /usr/share/elasticsearch/plugins/watcher ]; then echo yes; else echo no; fi;
   register: other_watcher_version_exists
-  always_run: True
+  check_mode: no
 
 # - name: Removing other Marvel Plugin
 #   shell: bin/plugin remove marvel chdir=/usr/share/elasticsearch
