@@ -17,28 +17,6 @@
 # Elasticsearch PID directory
 #PID_DIR=/var/run/elasticsearch
 
-# Heap size defaults to 256m min, 1g max
-# Set ES_HEAP_SIZE to 50% of available RAM, but no more than 31g
-{% if elasticsearch_heap_size is defined %}
-# Explicit defined Heap Size
-ES_HEAP_SIZE={{ elasticsearch_heap_size }}
-{% elif elasticsearch_heap_size_percentage is defined %}
-{% set heap_size = (elasticsearch_heap_size_percentage * ansible_memtotal_mb / 1024) | round | int %}
-# {{ elasticsearch_heap_size_percentage }} * {{ ansible_memtotal_mb }} = {{ elasticsearch_heap_size_percentage * ansible_memtotal_mb }}
-# ({{ elasticsearch_heap_size_percentage }} * {{ ansible_memtotal_mb }} / 1024) = {{ elasticsearch_heap_size_percentage * ansible_memtotal_mb / 1024 }}
-# ({{ elasticsearch_heap_size_percentage }} * {{ ansible_memtotal_mb }} / 1024) | round = {{ heap_size }}
-{% if heap_size >= 1 %}
-# Set to {{ elasticsearch_heap_size_percentage * 100 }}% of memory {{ ansible_memtotal_mb }}MB
-ES_HEAP_SIZE={{ heap_size }}g
-{% else %}
-# Defaulted to 50% of memory as calculated heap size was below 1
-# Try increasing 'elasticsearch_heap_size_percentage' or define specific heap size in 'elasticsearch_heap_size'
-ES_HEAP_SIZE={{ ( 0.5 * ansible_memtotal_mb / 1024) | int }}g
-{% endif %}
-{% else %}
-#ES_HEAP_SIZE=2g
-{% endif %}
-
 # Heap new generation
 #ES_HEAP_NEWSIZE=
 

@@ -5,7 +5,7 @@
 
 This is a Ansible role to installs [elasticsearch](https://www.elastic.co/products/elasticsearch)
 
-This role is based on role ```elastic``` <https://github.com/rueian/ansible-elk-example> by Rueian
+This role was based on role ```elastic``` <https://github.com/rueian/ansible-elk-example> by Rueian
 
 ## Requirements
 
@@ -13,15 +13,16 @@ Ansible 2.x
 
 ## Role Variables
 
-|Variable|Description|
-|---|---|
-```elasticsearch_repo_version```|2.x|
-```elasticsearch_pkg```|elasticsearch|
-```elasticsearch_plugin_marvel_version```|2.3.1
-```elasticsearch_plugin_license_version```|2.3.1
-```elasticsearch_plugin_watcher_version```|2.3.1
-|```elasticsearch_with_plugin```|false|
-|```apt_cache_valid_time```|600|
+|Variable|Description|Default|
+|---|---|---|
+|```elasticsearch_version```||5.3.0|
+|```elasticsearch_version_check```||5.3.0||
+|```elasticsearch_apt_package_name```||```"elasticsearch-{{ elasticsearch_version }}.deb"```|
+|```elasticsearch_download_url```||```"https://artifacts.elastic.co/downloads/elasticsearch/{{ elasticsearch_apt_package_name }}"```|
+|```elasticsearch_with_plugin```||false|
+|```elasticsearch_discovery_zen_minimum_master_nodes```||1|
+|```elasticsearch_heap_size_percentage```||0.5|
+|```apt_cache_valid_time```||600|
 
 ## Dependencies
 

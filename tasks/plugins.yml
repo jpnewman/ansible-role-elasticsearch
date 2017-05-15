@@ -1,4 +1,4 @@
-# - shell: if [ -e /usr/share/elasticsearch/plugins/marvel/marvel-{{elasticsearch_plugin_marvel_version}}.jar ]; then echo yes; else echo no; fi;
+# - shell: if [ -e /usr/share/elasticsearch/plugins/marvel/marvel-{{ elasticsearch_plugin_marvel_version }}.jar ]; then echo yes; else echo no; fi;
 #   register: marvel_version_exists
 #   check_mode: no
 
@@ -6,7 +6,7 @@
 #   register: other_marvel_version_exists
 #   check_mode: no
 
-- shell: if [ -e /usr/share/elasticsearch/plugins/license/license-{{elasticsearch_plugin_license_version}}.jar ]; then echo yes; else echo no; fi;
+- shell: if [ -e /usr/share/elasticsearch/plugins/license/license-{{ elasticsearch_plugin_license_version }}.jar ]; then echo yes; else echo no; fi;
   register: license_version_exists
   check_mode: no
 
@@ -14,7 +14,7 @@
   register: other_license_version_exists
   check_mode: no
 
-- shell: if [ -e /usr/share/elasticsearch/plugins/watcher/watcher-{{elasticsearch_plugin_watcher_version}}.jar ]; then echo yes; else echo no; fi;
+- shell: if [ -e /usr/share/elasticsearch/plugins/watcher/watcher-{{ elasticsearch_plugin_watcher_version }}.jar ]; then echo yes; else echo no; fi;
   register: watcher_version_exists
   check_mode: no
 

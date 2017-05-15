@@ -415,9 +415,7 @@ cloud.aws.region: {{ elasticsearch_plugin_aws_region}}
 # for large clusters (>3 nodes):
 #
 # discovery.zen.minimum_master_nodes: 1
-{% if elasticsearch_discovery_zen_minimum_master_nodes is defined %}
 discovery.zen.minimum_master_nodes: {{ elasticsearch_discovery_zen_minimum_master_nodes }}
-{% endif %}
 
 # Set the time to wait for ping responses from other nodes when discovering.
 # Set this option to a higher value on a slow or congested network
@@ -438,9 +436,9 @@ discovery.zen.ping.timeout: {{ elasticsearch_discovery_zen_ping_timeout }}
 # 1. Disable multicast discovery (enabled by default):
 #
 # discovery.zen.ping.multicast.enabled: false
-{% if elasticsearch_discovery_zen_ping_multicast_enabled is defined %}
-discovery.zen.ping.multicast.enabled: {{ elasticsearch_discovery_zen_ping_multicast_enabled }}
-{% endif %}
+# {% if elasticsearch_discovery_zen_ping_multicast_enabled is defined %}
+# discovery.zen.ping.multicast.enabled: {{ elasticsearch_discovery_zen_ping_multicast_enabled }}
+# {% endif %}
 
 #
 # 2. Configure an initial list of master nodes in the cluster
